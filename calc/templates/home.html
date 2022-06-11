@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Strona Główna
+{% endblock %}
+
+{% block content %}
+<body class="text-center">
+    <div class="container">
+        <br>
+        <h1>Potrzebujesz czegoś, Internetowy Podróżniku?</h1>
+        <br>
+        <h1>Może jakiś plakacik? Dwa?</h1>
+        <h1>Ewentualnie siedemdziesiąt cztery?</h1>
+        <br>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    <h4>Cyfra<span class="badge badge-secondary"></span></h4>
+                    
+                    <a class="btn btn-outline-dark btn-block" style="background-color: #ff6600;" href="{{ url_for('business_cards') }}">Wizytówki</a>
+                    <a class="btn btn-outline-dark btn-block" style="background-color: #ff6600;" href="{{ url_for('posters') }}">Plakaty</a>
+                    <a class="btn btn-outline-dark btn-block" style="background-color: #ff6600;" href="{{ url_for('flyers') }}">Ulotki</a>
+                    <a class="btn btn-outline-dark btn-block" style="background-color: #ff6600;" href="{{ url_for('flyers_folded') }}">Ulotki Składane</a>
+                    <a class="btn btn-outline-dark btn-block" style="background-color: #ff6600;" href="{{ url_for('flyers_custom') }}">Ulotki Niestandardowe</a>
+                    <a class="btn btn-outline-dark btn-block" style="background-color: #ff6600;" href="{{ url_for('basic') }}">Zwykły Druk</a>
+                </div>
+                
+                <div class="col-sm">
+                    <h4>Solwent<span class="badge badge-secondary"></span></h4>
+                    
+                    <a class="btn btn-outline-light btn-block" style="background-color: #ff6600;" href="{{ url_for('rollup') }}">Roll-Up</a>
+                    <a class="btn btn-outline-light btn-block" style="background-color: #ff6600;" href="{{ url_for('banner') }}">Banery</a>
+                    <a class="btn btn-outline-light btn-block" style="background-color: #ff6600;" href="{{ url_for('foil') }}">Folia</a>
+                    <a class="btn btn-outline-light btn-block" style="background-color: #ff6600;" href="{{ url_for('owv') }}">OWV</a>
+                    <a class="btn btn-outline-light btn-block" style="background-color: #ff6600;" href="{{ url_for('posters_sol') }}">Plakaty</a>
+                    <a class="btn btn-outline-light btn-block" style="background-color: #ff6600;" href="{{ url_for('posters_sol_custom') }}">Plakaty niestandardowe</a>
+                </div>
+
+            </div>
+            <!-- <br>
+            <div>
+                <h3>Odwiedź nas już teraz!</h3>
+                <a href="https://soprint.it/" target="_blank">
+                    <img border="0" alt="SoPrint.it" src="static/so_print.png">
+                </a>
+            </div>
+            <br> -->
+        </div>
+        <br>
+    </div>
+</body>
+{% endblock %}

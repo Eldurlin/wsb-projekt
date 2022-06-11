@@ -1,0 +1,31 @@
+<div class="modal" tabindex="-1" id="modal-changer-{{ var.id }}">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">{{ var.name }}</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Obecna wartość: {{ var.value }}</p>
+                <form method="POST">
+                    {{ var_changer_form.hidden_tag() }}
+                    {{ var_changer_form.new_value.label }} {{ var_changer_form.new_value }}
+                    <br>
+                    <h5 style="color: red;">Pamiętaj, aby użyć kropki zamiast przecinka!</h5>
+                    <div class="modal-footer">
+                        <input id="changed_value" name="changed_value" type="hidden" value="{{ var.name }}">
+                        {{ var_changer_form.submit(class="btn btn-outline-success btn-block") }}
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .modal-content {
+        background-color: #212121;
+    }
+</style>
